@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  ng2-pdf-viewer:
+    image: node:16.13.2-bullseye
+    platform: linux/amd64
+    volumes:
+      - .:/home/node/app
+    working_dir: /home/node/app
+    command: sleep 100000

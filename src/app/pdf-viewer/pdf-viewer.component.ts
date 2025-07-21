@@ -203,15 +203,15 @@ export class PdfViewerComponent
   static getLinkTarget(type: string) {
     switch (type) {
       case 'blank':
-        return (PDFJS as any).LinkTarget.BLANK;
+        return (PDFJSViewer as any).LinkTarget.BLANK;
       case 'none':
-        return (PDFJS as any).LinkTarget.NONE;
+        return (PDFJSViewer as any).LinkTarget.NONE;
       case 'self':
-        return (PDFJS as any).LinkTarget.SELF;
+        return (PDFJSViewer as any).LinkTarget.SELF;
       case 'parent':
-        return (PDFJS as any).LinkTarget.PARENT;
+        return (PDFJSViewer as any).LinkTarget.PARENT;
       case 'top':
-        return (PDFJS as any).LinkTarget.TOP;
+        return (PDFJSViewer as any).LinkTarget.TOP;
     }
 
     return null;
@@ -349,7 +349,8 @@ export class PdfViewerComponent
             stickToPage = !this._stickToPage;
           }
 
-          currentViewer._setScale(scale, stickToPage);
+          currentViewer.currentScale = scale;
+          if (stickToPage) currentViewer.scrollPageIntoView({ pageNumber: page.pageNumber, ignoreDestinationZoom: true })
         }
       });
   }
@@ -425,7 +426,8 @@ export class PdfViewerComponent
     });
     this.pdfMultiPageFindController = new PDFJSViewer.PDFFindController({
       linkService: this.pdfMultiPageLinkService,
-      eventBus
+      eventBus,
+      updateMatchesCountOnProgress: false
     });
 
     const pdfOptions: PDFViewerOptions = {
@@ -437,8 +439,7 @@ export class PdfViewerComponent
         ? this._renderTextMode
         : RenderTextMode.DISABLED,
       findController: this.pdfMultiPageFindController,
-      renderer: 'canvas',
-      l10n: undefined
+      l10n: new PDFJSViewer.GenericL10n('en'),
     };
 
     this.pdfMultiPageViewer = new PDFJSViewer.PDFViewer(pdfOptions);
@@ -482,7 +483,8 @@ export class PdfViewerComponent
     });
     this.pdfSinglePageFindController = new PDFJSViewer.PDFFindController({
       linkService: this.pdfSinglePageLinkService,
-      eventBus
+      eventBus,
+      updateMatchesCountOnProgress: false
     });
 
     const pdfOptions = {
@@ -493,7 +495,9 @@ export class PdfViewerComponent
       textLayerMode: this._renderText
         ? this._renderTextMode
         : RenderTextMode.DISABLED,
-      findController: this.pdfSinglePageFindController
+      findController: this.pdfSinglePageFindController,
+      renderer: 'canvas',
+			l10n: undefined,
     };
 
     this.pdfSinglePageViewer = new PDFJSViewer.PDFSinglePageViewer(pdfOptions);

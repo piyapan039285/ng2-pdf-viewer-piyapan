@@ -28,6 +28,10 @@
         Or render preview by just selecting PDF file (no upload required)
       </p>
       <input (change)="onFileSelected()" type="file" id="file">
+      <button mat-button color="warn" (click)="pdfSrc = null" class="clear-button">
+        <mat-icon>clear</mat-icon>
+        Clear PDF
+      </button>
     </div>
 
     <div *ngIf="error" class="error mb">
@@ -187,7 +191,7 @@
 
 
   <mat-drawer-content>
-    <pdf-viewer [src]="pdfSrc"
+    <pdf-viewer *ngIf="pdfSrc" [src]="pdfSrc"
                 [(page)]="page"
                 [rotation]="rotation"
                 [original-size]="originalSize"

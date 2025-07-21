@@ -1,26 +1,19 @@
-<h1 align="center">Angular PDF Viewer</h1>
-<p align="center">
-  <a href="https://www.npmjs.com/package/ng2-pdf-viewer">
-    <img src="https://img.shields.io/npm/dm/ng2-pdf-viewer.svg?style=flat" alt="downloads">
-  </a>
-  <a href="https://badge.fury.io/js/ng2-pdf-viewer">
-    <img src="https://badge.fury.io/js/ng2-pdf-viewer.svg" alt="npm version">
-  </a>
-  <a href="https://david-dm.org/vadimdez/ng2-pdf-viewer" title="dependencies status">
-    <img src="https://david-dm.org/vadimdez/ng2-pdf-viewer/status.svg"/>
-  </a>
-  <a href="https://travis-ci.org/VadimDez/ng2-pdf-viewer" title="test">
-    <img src="https://travis-ci.org/VadimDez/ng2-pdf-viewer.svg?branch=master"/>
-  </a>
-  <a href="https://gitter.im/ngx-pdf-viewer/Lobby" title="Gitter">
-    <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg" alt="Gitter"/>
-  </a>
-  <a href="https://www.paypal.me/vadimdez" title="Donate to this project using Paypal">
-    <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" />
-  </a>
+<h1 align="center">ng2-pdf-viewer-piyapan (Forked from ng2-pdf-viewer)</h1>
+<p align="center"> **Note:** This is a fork of the original ng2-pdf-viewer to support some extra pdfjs version
 </p>
-
-> PDF Viewer Component for Angular 5+
+<h2 align="center">Version Support</h2>
+<table align="center">
+  <tr>
+    <th>ng2-pdf-viewer-piyapan version</th>
+    <th>Angular</th>
+    <th>PDF.js</th>
+  </tr>
+  <tr>
+    <td>7.0.4</td>
+    <td>13</td>
+    <td>3.6.172</td>
+  </tr>
+</table>
 
 ### Demo page
 
