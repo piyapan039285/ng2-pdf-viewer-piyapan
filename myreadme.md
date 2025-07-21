@@ -12,3 +12,12 @@ docker-compose exec ng2-pdf-viewer bash
   npm ci
   npm run test:ci
 ```
+
+
+## publish
+```
+npm run packagr
+cd dist
+npm login
+npm publish
+```
