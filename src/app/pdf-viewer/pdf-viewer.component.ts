@@ -496,8 +496,7 @@ export class PdfViewerComponent
         ? this._renderTextMode
         : RenderTextMode.DISABLED,
       findController: this.pdfSinglePageFindController,
-      renderer: 'canvas',
-			l10n: undefined,
+      l10n: new PDFJSViewer.GenericL10n('en'),
     };
 
     this.pdfSinglePageViewer = new PDFJSViewer.PDFSinglePageViewer(pdfOptions);
