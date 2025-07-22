@@ -9,7 +9,7 @@
     <th>PDF.js</th>
   </tr>
   <tr>
-    <td>7.0.4</td>
+    <td>7.0.5</td>
     <td>13</td>
     <td>3.6.172</td>
   </tr>
