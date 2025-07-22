@@ -15,17 +15,11 @@
   </tr>
 </table>
 
-### Demo page
-
-[https://vadimdez.github.io/ng2-pdf-viewer/](https://vadimdez.github.io/ng2-pdf-viewer/)
 
 #### Stackblitz Example
 
-[https://stackblitz.com/edit/ng2-pdf-viewer](https://stackblitz.com/edit/ng2-pdf-viewer)
+[https://stackblitz.com/edit/ng2-pdf-viewer](https://stackblitz.com/edit/angular-ng2-pdf-viewer-piyapan?file=src%2Fapp%2Fapp.component.css,src%2Fapp%2Fapp.component.html)
 
-### Blog post
-
-[https://medium.com/@vadimdez/render-pdf-in-angular-4-927e31da9c76](https://medium.com/@vadimdez/render-pdf-in-angular-4-927e31da9c76)
 
 ## Overview
 

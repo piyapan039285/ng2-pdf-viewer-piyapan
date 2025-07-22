@@ -6,7 +6,7 @@ nvm use 16.13
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 npm install 
 
-
+# in case you use docker
 docker-compose up -d
 docker-compose exec ng2-pdf-viewer bash
   npm ci
